@@ -1952,7 +1952,7 @@ public:
 
     virtual P256Keypair * BuildP256KeyPairForEphemeralUsage() override;
 
-    virtual void FreeP256KeyPair(P256Keypair* p256key) override;
+    virtual void FreeP256KeyPair(P256Keypair * p256key) override;
 };
 
 P256Keypair * OpensslDefaultP256KeypairBuilder::BuildP256KeyPairForOperationalKey(FabricIndex fabricIdx)
@@ -1972,9 +1972,10 @@ P256Keypair * OpensslDefaultP256KeypairBuilder::BuildP256KeyPairForEphemeralUsag
     return keypair;
 }
 
-void OpensslDefaultP256KeypairBuilder::FreeP256KeyPair(P256Keypair* p256key)
+void OpensslDefaultP256KeypairBuilder::FreeP256KeyPair(P256Keypair * p256key)
 {
-    if (p256key != nullptr){
+    if (p256key != nullptr)
+    {
         p256key->Clear();
         Platform::Delete(p256key);
     }

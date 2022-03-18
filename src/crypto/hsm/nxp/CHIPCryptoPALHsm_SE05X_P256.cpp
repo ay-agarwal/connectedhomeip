@@ -782,7 +782,7 @@ P256Keypair * HSMDefaultP256KeypairBuilder::BuildP256KeyPairForEphemeralUsage()
     return keypair;
 }
 
-void HSMDefaultP256KeypairBuilder::FreeP256KeyPair(P256Keypair* p256key)
+void HSMDefaultP256KeypairBuilder::FreeP256KeyPair(P256Keypair * p256key)
 {
     (void) p256key;
     return;

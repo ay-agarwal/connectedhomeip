@@ -219,7 +219,7 @@ public:
 
     virtual P256Keypair * BuildP256KeyPairForEphemeralUsage() override;
 
-    virtual void FreeP256KeyPair(P256Keypair* p256key) override;
+    virtual void FreeP256KeyPair(P256Keypair * p256key) override;
 };
 
 #ifdef ENABLE_HSM_EC_KEY
